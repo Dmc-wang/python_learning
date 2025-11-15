@@ -160,7 +160,7 @@ B 站 Python 零基础教程
 慕课网 Python 专区
 
 🚀 快速开始
-git clone https://github.com/你的用户名/python_learning.git
+git clone https://github.com/Dmc-wang/python_learning.git
 cd python_learning
 python3 hello_world.py
 
