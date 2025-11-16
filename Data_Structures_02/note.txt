@@ -3,38 +3,38 @@
 一、需要学习的具体内容（逐条）
 1️⃣ 列表 list（核心）
 要学会：
-创建：[1, 2, 3]
-索引、切片
-增删：append / insert / pop / remove
-排序：sort、sorted
-遍历方式：for / enumerate
+    创建：[1, 2, 3]
+    索引、切片
+    增删：append / insert / pop / remove
+    排序：sort、sorted
+    遍历方式：for / enumerate
 
 2️⃣ 字典 dict（核心）
 要学会：
-创建：{"name": "Tom", "age": 20}
-索引：dict["key"]
-安全读取：.get()
-增删改查
-遍历：.items()、.keys()、.values()
-常见应用：统计频率、映射关系
+    创建：{"name": "Tom", "age": 20}
+    索引：dict["key"]
+    安全读取：.get()
+    增删改查
+    遍历：.items()、.keys()、.values()
+    常见应用：统计频率、映射关系
 
 3️⃣ 集合 set（理解 + 应用）
-去重
-并集：|
-交集：&
-差集：-
-添加、删除元素
+    去重
+    并集：|
+    交集：&
+    差集：-
+    添加、删除元素
 
 4️⃣ 元组 tuple（了解）
-不可变类型
-用于确保数据不被修改
-元组解包
+    不可变类型
+    用于确保数据不被修改
+    元组解包
 
 5️⃣ 函数（重点）
 要掌握：
-函数的定义：def
-位置参数、默认参数
-可变参数：*args / **kwargs
-返回 return 的使用时机
-函数作用域
-lambda 表达式（单行函数）
+    函数的定义：def
+    位置参数、默认参数
+    可变参数：*args / **kwargs
+    返回 return 的使用时机
+    函数作用域
+    lambda 表达式（单行函数）
