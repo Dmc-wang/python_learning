@@ -1,0 +1,27 @@
+今日任务清单（可执行）
+1️⃣ 编写 “自动创建多级目录脚本” (M01)
+输入：项目名 my_project
+自动生成结构：
+my_project/
+    src/
+    data/
+    logs/
+    tests/
+
+2️⃣ 写 5 个模块练习（Module Practice） (modules)
+要求你自己创建模块，例如：
+    utils_math.py
+    utils_string.py
+    file_tools.py
+    rand_tools.py
+    sys_info.py
+    每个模块至少包含 2 个函数。
+
+3️⃣ GitHub 提交（包含脚本 + 模块目录）
+
+🧪 小练习（必须完成）   (M03 )
+✔ 小练习 1：用 os.walk 遍历目录
+目标：打印某个目录下所有文件与子文件夹。
+
+✔ 小练习 2：模拟“自动生成项目目录脚本”  (M02)
+功能类似于脚手架工具（scaffold）。
