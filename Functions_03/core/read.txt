@@ -1,0 +1,58 @@
+批量重命名文件脚本详解
+(1) What：这个脚本是什么？
+    这是一个工程级文件批处理工具，功能是将指定文件夹内的所有文件按统一规则批量重命名（如 img_1.jpg、img_2.jpg），
+并支持通过参数灵活控制行为。它不是一次性脚本，而是可复用、可测试、安全的通用模块。
+    核心能力矩阵：
+    输入：文件夹路径 + 命名规则（前缀/序号/扩展名过滤）
+    输出：重命名后的文件系统 + 操作日志
+    安全机制：dry-run 模式仅预览不执行，防止误操作
+
+(2）Why：为什么需要这样的设计？（工程痛点）
+    手工重命名的灾难：
+        100 个文件手动改名需 30 分钟，且易出错（漏改、重名冲突）
+        无日志追溯，改错无法回滚
+        规则多变（今天加前缀，明天改扩展名），脚本要适应
+    设计目标：
+        pathlib 标准：替代 os.path，跨平台路径处理更健壮（Windows \ vs Linux /）
+        参数化：函数而非脚本，可被其他模块导入调用，嵌入更大工作流
+        dry_run  ：工程必选项，生产环境执行前必须可验证效果，避免"跑崩"
+        类型提示：: str、| None 让 IDE 和代码审查工具提前发现参数错误
+        if __name__ == "__main__"：脚本可直接运行，也可被导入不执行，符合 Python 模块规范
+    面试价值：能说出这些设计点，证明你不是写玩具代码，而是理解工程级代码的可维护性、安全性、可扩展性。
+
+（3）How：怎么用？（内部实现拆解）
+A. batch_rename 函数签名设计
+    位置参数 folder_path: str
+    What：唯一必填参数，指定目标文件夹路径
+    Why：批处理必须有操作对象，放在第一位置符合直觉，调用时先写路径再写规则
+    How：调用时直接传字符串路径，函数内用 Path() 包装，获得路径对象的所有方法
+B. 默认参数（prefix="file_", start=1）
+    What：未传参时自动采用的命名规则
+    Why：80% 场景需求是 file_1.jpg、file_2.jpg，默认参数让调用最简化：batch_rename("./pics") 就能工作
+    How：调用时只覆盖需要变的参数，如 batch_rename("./pics", prefix="img_")，其他保留默认值，避免冗长传参
+C. 可选参数 ext: str | None
+    What ：过滤器，只处理指定扩展名的文件
+    Why ：文件夹混杂 .jpg、.png、.txt 时，只想改图片，过滤避免误伤
+    How ：传 ".jpg" 时，if ext and file.suffix != ext 跳过非 .jpg 文件，实现精准控制。| None 表示"可传
+可不传"，不传则处理全部文件
+D.  安全开关 dry_run: bool
+    What ：True 时只打印 old → new，不执行 rename()
+    Why ：这是工程脚本的 生命线 ！生产环境文件夹含 10 万文件，规则写错直接灾难。dry-run 让你先预览 10 条，确认无
+误后再执行
+    How ：调用时 batch_rename("./pics", dry_run=True) 看日志，确认后再改 False 执行。真正的脚本必须默认
+dry_run=True，强制用户显式关闭
+E. pathlib 的核心作用
+    What：替代 os.path.join()、os.listdir() 的面向对象路径操作
+    Why：Path("/a/b") / "c" 自动处理跨平台斜杠；file.suffix 直接取扩展名，无需字符串切割；folder.iterdir()
+迭代器内存友好
+    How：函数内所有路径操作都用 Path 对象，rename() 是对象方法，无需导入 os 模块
+F. 错误处理 raise FileNotFoundError
+    What ：路径不存在时主动抛出异常，而非静默失败
+    Why ：工程代码不能 "fail silently"。如果路径写错，脚本继续跑但什么都没做，你会误以为成功。抛出异常让调用者显
+式捕获或修正
+    How ：调用时用 try-except 捕获，或在 CI 流程中让异常触发告警
+G.  if __name__ == "__main__" 的作用
+    What ：模块的直接执行入口
+    Why ：当 python batch_rename.py 时执行示例；当 import batch_rename 时示例不运行。这允许脚本 既独立运行，
+又被复用 。这是 Python 模块的黄金法则
+    How ：平时测试直接运行文件；其他脚本需要批量重命名功能时 from batch_rename import batch_rename，不会误触发示例
