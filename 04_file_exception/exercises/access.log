@@ -1,0 +1,22 @@
+# 2023-07-21 日志片段
+2023-07-21 10:00:01 - INFO - Connection from 192.168.1.15 port 443
+2023-07-21 10:00:03 - INFO - User login successful from 10.0.0.2
+2023-07-21 10:00:05 - ERROR - Connection timeout from 10.0.0.2
+2023-07-21 10:00:07 - WARNING - Failed authentication from 203.0.113.45
+2023-07-21 10:00:09 - INFO - Data uploaded from 192.168.1.15
+2023-07-21 10:00:11 - ERROR - Connection from 192.168.1.15 port 80
+2023-07-21 10:00:13 - INFO - New session from 203.0.113.45
+2023-07-21 10:00:15 - INFO - Connection from 172.16.0.5 port 22
+2023-07-21 10:00:17 - DEBUG - Health check from 127.0.0.1
+2023-07-21 10:00:19 - ERROR - Database connection failed from 10.0.0.2
+2023-07-21 10:00:21 - INFO - User logout from 192.168.1.15
+2023-07-21 10:00:23 - WARNING - Suspicious activity from 203.0.113.45
+2023-07-21 10:00:25 - INFO - Backup completed from 172.16.0.5
+2023-07-21 10:00:27 - INFO - Connection from 198.51.100.10 port 8080
+2023-07-21 10:00:29 - ERROR - Service unavailable from 198.51.100.10
+2023-07-21 10:00:31 - INFO - Version 2.1.3.4 deployed  # 注意：这行会被误匹配！
+2023-07-21 10:00:33 - INFO - Connection from 192.168.1.15 port 443
+2023-07-21 10:00:35 - WARNING - High CPU usage - no IP in this line
+2023-07-21 10:00:37 - INFO - Data sync from 2001:db8::1  # IPv6地址（不会被旧版正则匹配）
+2023-07-21 10:00:39 - ERROR - Connection from 999.888.777.666  # 非法IP（会被原正则误匹配）
+2023-07-21 10:00:41 - INFO - Connection from 192.168.001.015 port 3306  # 带前导零的IP
