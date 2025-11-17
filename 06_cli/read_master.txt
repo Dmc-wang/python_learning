@@ -1,0 +1,68 @@
+"""
+organize_downloads.py
+
+最小可用 CLI：将下载文件夹内常见文件按类型自动分类到子文件夹。
+
+功能：
+- 支持递归或非递归扫描
+- 支持 dry-run（只打印，不执行）
+- 安全移动（避免覆盖，遇到冲突则自动重命名）
+- 日志记录与异常处理
+- 可配置分类扩展名（默认内置常用类型）
+"""
+
+（1） # 命令行参数解析函数
+    def parse_args() -> argparse.Namespace:
+    作用其实就是创建一个对象，对象里的属性是根据你命令行里的参数决定的。就是给对象赋值
+
+    例如：
+    python 06_cli\organize_downloads_zi.py --src "C:\Users\Administrator\Downloads" --recursive --top 100 --dry-run
+    args = parse_args()
+    args.src = C:\Users\Administrator\Downloads
+    args.recursive = True
+    args.top = 100
+    args.dry_run = True
+    args.extensions = jpg
+
+(2) 文件扫描(递归/非递归)
+
+(3) 构建文件扩展名到分类映射的函数
+    {
+    "images": ["jpg", "jpeg", "png", "gif"],
+    "documents": ["pdf", "doc", "docx", "txt"],
+    "archives": ["zip", "rar", "7z"]
+    }
+    |
+    {
+    "jpg": "images",
+    "jpeg": "images",
+    "png": "images",
+    "gif": "images",
+    "pdf": "documents",
+    "doc": "documents",
+    "docx": "documents",
+    "txt": "documents",
+    "zip": "archives",
+    "rar": "archives",
+    "7z": "archives"
+    }
+
+(3) 根据文件扩展名确定其所属的分类
+    # 假设有扩展名映射表
+    extension_map = {
+        "jpg": "images",
+        "png": "images",
+        "pdf": "documents",
+        "doc": "documents",
+        "zip": "archives"
+    }
+
+    # 分类示例
+    print(categorize_by_extension("JPG", extension_map))     # 输出: images
+    print(categorize_by_extension(".PDF", extension_map))    # 输出: documents
+    print(categorize_by_extension("mp3", extension_map))     # 输出: others
+    print(categorize_by_extension("DOC", extension_map))     # 输出: documents
+
+(4) 日志初始化
+
+(5) 核心代码，文件分类移动
