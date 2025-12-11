@@ -380,6 +380,28 @@ class FileOrganizer:
             done += 1
         return done
 
+    def clean_empty_folders(self, dry_run: bool = False):
+        """清理空文件夹"""
+        logger.info("开始清理空文件夹...")
+
+        deleted_count = 0
+        for root, dirs, files in os.walk(self.source_dir, topdown=False):
+            for dir_name in dirs:
+                dir_path = Path(root) / dir_name
+                try:
+                    if not any(dir_path.iterdir()):  # 文件夹为空
+                        if not dry_run:
+                            dir_path.rmdir()
+                            logger.info(f"删除空文件夹: {dir_path}")
+                        else:
+                            logger.info(f"[试运行] 将删除空文件夹: {dir_path}")
+                        deleted_count += 1
+                except Exception as e:
+                    logger.error(f"删除文件夹失败 {dir_path}: {e}")
+
+        logger.info(f"清理完成！共删除 {deleted_count} 个空文件夹")
+        return deleted_count
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description = "自动整理文件脚本")
@@ -387,6 +409,17 @@ if __name__ == "__main__":
     parser.add_argument("-dst", "--dst", help = "整理后目录（默认同 src）")
     parser.add_argument("-dr", "--dry-run", action="store_true",
                         help="只预览，不真正移动")
+    parser.add_argument("-m", "--mode", choices = ["type", "date", "size", "all"],
+                    default="type", help="整理方式")
+    parser.add_argument("-f", "--date-format", default="%Y-%m-%d",
+                    help="日期整理时的格式，默认 %%Y-%%m-%%d")
+
     args = parser.parse_args()
     org = FileOrganizer(args.src, args.dst)
-    org.organize_by_category(dry_run = args.dry_run)
+
+    if args.mode in {"type", "all"}:
+        org.organize_by_category(dry_run = args.dry_run)
+    if args.mode in {"date", "all"}:
+        org.organize_by_date(date_format = args.date_format, dry_run = args.dry_run)
+    if args.mode in {"size", "all"}:
+        org.organize_by_size(dry_run = args.dry_run)
