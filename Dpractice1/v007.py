@@ -413,7 +413,12 @@ if __name__ == "__main__":
                     default="type", help="整理方式")
     parser.add_argument("-f", "--date-format", default="%Y-%m-%d",
                     help="日期整理时的格式，默认 %%Y-%%m-%%d")
-
+    parser.add_argument("--dedup", choices=["link", "delete"],
+                        help="对重复文件建硬链或删除")
+    parser.add_argument("--clean-empty", action="store_true",
+                        help="整理后删除空文件夹")
+    parser.add_argument("-v", "--verbose", action="store_true",
+                        help="更详细的 DEBUG 日志")
     args = parser.parse_args()
     org = FileOrganizer(args.src, args.dst)
 
@@ -423,3 +428,7 @@ if __name__ == "__main__":
         org.organize_by_date(date_format = args.date_format, dry_run = args.dry_run)
     if args.mode in {"size", "all"}:
         org.organize_by_size(dry_run = args.dry_run)
+    if args.dedup:
+        org.dedup(mode=args.dedup, dry_run = args.dry_run)
+    if args.clean_empty:
+        org.clean_empty_folders(dry_run = args.dry_run)
