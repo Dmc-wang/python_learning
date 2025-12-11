@@ -144,7 +144,7 @@ class FileOrganizer:
                 # 如果哈希已存在，说明是重复文件
                 if file_hash in hash_dict:
                     if file_hash not in duplicates:
-                        duplicates[file_hash] = [hash_dict[file_hash]]
+                        duplicates[file_hash] = [hash_dict[file_hash]] # 列表
                         duplicates[file_hash].append(file_path)
                 else:
                     # 记录首次出现文件
