@@ -384,5 +384,9 @@ class FileOrganizer:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description = "自动整理文件脚本")
     parser.add_argument('src', help = "要整理的目录")
+    parser.add_argument("-dst", "--dst", help = "整理后目录（默认同 src）")
+    parser.add_argument("-dr", "--dry-run", action="store_true",
+                        help="只预览，不真正移动")
     args = parser.parse_args()
-    print("你输入的目录是：", args.src)
+    org = FileOrganizer(args.src, args.dst)
+    org.organize_by_category(dry_run = args.dry_run)
