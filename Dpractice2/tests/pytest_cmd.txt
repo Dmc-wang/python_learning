@@ -1,0 +1,26 @@
+# 1. 运行所有测试
+pytest
+
+# 2. 只运行某个文件
+pytest tests/test_renamer_basic.py
+
+# 3. 只运行某个函数
+pytest tests/test_renamer_basic.py::test_with_fixture
+
+# 4. 显示详细输出
+pytest -v
+
+# 5. 显示 print 内容
+pytest -s
+
+# 6. 同时用 -v -s
+pytest -vs
+
+# 7. 测试失败时进入交互调试
+pytest --pdb
+
+# 8. 只跑包含 'sequential' 关键字的测试
+pytest -k sequential
+
+# 9. 统计测试覆盖率（需要 pip install pytest-cov）
+pytest --cov=src --cov-report=html

@@ -20,11 +20,11 @@ def parse_arguments():
         description='批量重命名图片文件工具',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
-示例:
-  %(prog)s ./photos --pattern sequential --start 1
-  %(prog)s ./images --pattern prefix --prefix "vacation_"
-  %(prog)s ./pics --pattern replace --old "IMG" --new "Photo"
-  %(prog)s ./photos --dry-run --verbose
+        示例:
+          %(prog)s ./photos --pattern sequential --start 1
+          %(prog)s ./images --pattern prefix --prefix "vacation_"
+          %(prog)s ./pics --pattern replace --old "IMG" --new "Photo"
+          %(prog)s ./photos --dry-run --verbose
         """
     )
 
