@@ -3,10 +3,20 @@ import asyncio
 import httpx
 from selectolax.parser import HTMLParser
 
+import sys
+from pathlib import Path
+
+# 计算并插入src路径
+src_path = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(src_path))
+
+from utils.logger import logger
+
 async def fetch_title_async(url: str) -> dict:
     """
     异步版本：理解async/await的本质
     """
+    logger.debug(f"开始爬取: {url}")
 
     # 知识点：AsyncClient是异步上下文管理器
     async with httpx.AsyncClient(timeout = 5.0, follow_redirects = True) as client:
@@ -17,6 +27,8 @@ async def fetch_title_async(url: str) -> dict:
             tree = HTMLParser(resp.text)
             title_node = tree.css_first("title")
 
+            logger.info(f"✅ 成功: {str(resp.url)} -> {title_node.text(deep = True)[:40]}")
+
             return {
                 "url": str(resp.url),
                 "title": title_node.text(deep = True) if title_node else "",
@@ -25,6 +37,7 @@ async def fetch_title_async(url: str) -> dict:
             }
 
         except Exception as e:
+            logger.error(f"❌ 失败: {url} - {e}")
             return {
                 "url": str(url),
                 "title": "",
@@ -37,9 +50,9 @@ async def main():
     异步入口函数：理解事件循环
     """
     urls = [
-        "https://httpbin.org/delay/1",  # 这个URL会延迟1秒返回
-        "https://httpbin.org/delay/1",
-        "https://httpbin.org/delay/1"
+        "https://example.com",
+        "https://baidu.com",
+        "https://example.com"
     ]
 
     # 知识点：创建多个协程任务
