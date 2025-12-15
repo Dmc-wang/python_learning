@@ -1,0 +1,6 @@
+httpx
+selectolax
+pandas
+numpy
+openpyxl
+jieba
