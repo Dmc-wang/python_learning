@@ -1,0 +1,202 @@
+user_id,gender,age,category,product_name,amount,purchase_date,city
+U001,Male,28,Electronics,AirPods Pro,1288,2024-01-15,Beijing
+U002,Female,22,Clothing,Winter Jacket,399,2024/01/16,Shanghai
+U003,Male,,Electronics,iPhone 15,5999,2024-01-17,Guangzhou
+U004,Female,35,Food,Premium Coffee,128,2024-01-18,Shenzhen
+U005,Male,19,Clothing,Sneakers,599,2024-01-19,Beijing
+U001,Male,28,Electronics,AirPods Pro,1288,2024-01-15,Beijing
+U006,Female,42,Electronics,MacBook Air,7999,2024-01-20,Shanghai
+U007,Male,31,Food,Organic Tea,88,2024-01-21,
+U008,Female,26,clothing,Scarf,199,2024-01-22,Hangzhou
+U009,Male,45,Electronics,Smart Watch,1299,2024-01-23,Beijing
+U010,Female,29,Food,Chocolate Box,168,2024/01/24,Guangzhou
+U011,Male,33,Clothing ,Jeans,299,2024-01-25,Shenzhen
+U012,Female,38,Electronics,iPad,3299,2024-01-26,Beijing
+U013,Male,21,Food,Snack Pack,49,2024-01-27,Shanghai
+U014,Female,27,Electronics,Bluetooth Speaker,399,2024-01-28,
+U015,Male,36,Clothing,T-Shirt,99,2024-01-29,Beijing
+U016,Female,24,Food,Fresh Fruit,68,2024-01-30,Guangzhou
+U017,Male,30,Electronics,Wireless Mouse,149,2024-01-31,Shenzhen
+U018,Female,41,Clothing,Dress,459,2024/02/01,Beijing
+U019,Male,25,Food,Red Wine,288,2024-02-02,Shanghai
+U020,Female,32,Electronics,Keyboard,399,2024-02-03,Guangzhou
+U021,Male,29,Clothing,Hat,129,2024/02/04,Shenzhen
+U022,Female,37,Food,Cheese Selection,156,2024-02-05,Beijing
+U023,Male,23,Electronics,USB Cable,29,2024-02-06,Shanghai
+U024,Female,44,Clothing,Gloves,79,2024-02-07,Guangzhou
+U025,Male,27,Food,Caviar,999,2024-02-08,Shenzhen
+U026,Female,31,Electronics,Power Bank,159,2024-02-09,Beijing
+U027,Male,40,Clothing,Coat,799,2024-02-10,Shanghai
+U028,Female,20,Food,Cookie Tin,38,2024-02-11,Guangzhou
+U029,Male,34,Electronics,Earphones,199,2024-02-12,Shenzhen
+U030,Female,28,Clothing,Socks Pack,59,2024-02-13,Beijing
+U031,Male,26,Food,Truffle Oil,278,2024-02-14,Shanghai
+U032,Female,39,Electronics,Monitor,1899,2024-02-15,Guangzhou
+U033,Male,35,Clothing,Shirt,269,2024-02-16,Shenzhen
+U034,Female,30,Food,Matcha Powder,98,2024-02-17,Beijing
+U035,Male,22,Electronics,Hard Drive,499,2024-02-18,Shanghai
+U036,Female,43,Clothing,Skirt,329,2024-02-19,Guangzhou
+U037,Male,33,Food,Sea Salt,45,2024-02-20,Shenzhen
+U038,Female,25,Electronics,Webcam,299,2024-02-21,Beijing
+U039,Male,38,Clothing,Blazer,599,2024-02-22,Shanghai
+U040,Female,36,Food,Saffron,688,2024-02-23,Guangzhou
+U041,Male,24,Electronics,Gaming Mouse,349,2024-02-24,Shenzhen
+U042,Female,29,Clothing,Pullover,179,2024-02-25,Beijing
+U043,Male,41,Food,Vinegar Set,128,2024-02-26,Shanghai
+U044,Female,27,Electronics,SSD,599,2024-02-27,Guangzhou
+U045,Male,31,Clothing,Belt,149,2024-02-28,Shenzhen
+U046,Female,34,Food,Spice Collection,89,2024-03-01,Beijing
+U047,Male,28,Electronics,Graphics Card,2999,2024-03-02,Shanghai
+U048,Female,40,Clothing,Cardigan,259,2024-03-03,Guangzhou
+U049,Male,26,Food,Olive Oil,156,2024-03-04,Shenzhen
+U050,Female,32,Electronics,Router,399,2024-03-05,Beijing
+U051,Male,37,Clothing,Jacket,699,2024-03-06,Shanghai
+U052,Female,21,Food,Honey Jar,68,2024-03-07,Guangzhou
+U053,Male,30,Electronics,Camera Lens,1899,2024-03-08,Shenzhen
+U054,Female,35,Clothing,Leggings,129,2024-03-09,Beijing
+U055,Male,29,Food,Protein Bar,45,2024-03-10,Shanghai
+U056,Female,26,Electronics,Drone,2499,2024-03-11,Guangzhou
+U057,Male,44,Clothing,Tie,199,2024-03-12,Shenzhen
+U058,Female,33,Food,Tea Set,268,2024-03-13,Beijing
+U059,Male,25,Electronics,Microphone,499,2024-03-14,Shanghai
+U060,Female,39,Clothing,Shorts,159,2024-03-15,Guangzhou
+U061,Male,32,Food,Coffee Beans,98,2024-03-16,Shenzhen
+U062,Female,28,Electronics,Tablet Stand,79,2024-03-17,Beijing
+U063,Male,36,Clothing,Hoodie,359,2024-03-18,Shanghai
+U064,Female,31,Food,Nut Mix,58,2024-03-19,Guangzhou
+U065,Male,27,Electronics,RGB Lights,129,2024-03-20,Shenzhen
+U066,Female,42,Clothing,Swimsuit,229,2024-03-21,Beijing
+U067,Male,24,Food,Energy Drink,35,2024-03-22,Shanghai
+U068,Female,30,Electronics,Phone Case,49,2024-03-23,Guangzhou
+U069,Male,38,Clothing,Umbrella,99,2024-03-24,Shenzhen
+U070,Female,23,Food,Instant Noodles,28,2024-03-25,Beijing
+U071,Male,35,Electronics,VR Headset,1999,2024-03-26,Shanghai
+U072,Female,41,Clothing,Pajamas,189,2024-03-27,Guangzhou
+U073,Male,29,Food,Cake Mix,42,2024-03-28,Shenzhen
+U074,Female,26,Electronics,Laptop Cooler,89,2024-03-29,Beijing
+U075,Male,40,Clothing,Scarf,139,2024-03-30,Shanghai
+U076,Female,34,Food,Champagne,388,2024-03-31,Guangzhou
+U077,Male,22,Electronics,Scanner,299,2024-04-01,Shenzhen
+U078,Female,37,Clothing,Wool Sweater,429,2024-04-02,Beijing
+U079,Male,31,Food,Brownies,35,2024-04-03,Shanghai
+U080,Female,33,Electronics,Smart Bulb,69,2024-04-04,Guangzhou
+U081,Male,28,Clothing,Windbreaker,499,2024-04-05,Shenzhen
+U082,Female,45,Food,Syrup,78,2024-04-06,Beijing
+U083,Male,26,Electronics,Sound Card,399,2024-04-07,Shanghai
+U084,Female,32,Clothing,Briefcase,599,2024-04-08,Guangzhou
+U085,Male,39,Food,Balsamic,156,2024-04-09,Shenzhen
+U086,Female,25,Electronics,Adapter,129,2024-04-10,Beijing
+U087,Male,36,Clothing, Polo Shirt,199,2024-04-11,Shanghai
+U088,Female,29,Food,Granola,52,2024-04-12,Guangzhou
+U089,Male,43,Electronics,Projector,1299,2024-04-13,Shenzhen
+U090,Female,38,Clothing, Kimono,459,2024-04-14,Beijing
+U091,Male,27,Food,Wasabi,88,2024-04-15,Shanghai
+U092,Female,24,Electronics,Fan,79,2024-04-16,Guangzhou
+U093,Male,33,Clothing,Tracksuit,299,2024-04-17,Shenzhen
+U094,Female,40,Food,Mustard,45,2024-04-18,Beijing
+U095,Male,30,Electronics,Battery Pack,89,2024-04-19,Shanghai
+U096,Female,35,Clothing,Mittens,79,2024-04-20,Guangzhou
+U097,Male,25,Food,Pesto,98,2024-04-21,Shenzhen
+U098,Female,31,Electronics,GPS Device,599,2024-04-22,Beijing
+U099,Male,42,Clothing,Cloak,399,2024-04-23,Shanghai
+U100,Female,28,Food,Truffle Butter,188,2024-04-24,Guangzhou
+U101,Male,29,Electronics,Graphics Card,2999,2024-04-25,Shenzhen
+U102,Female,36,Clothing,Apron,69,2024-04-26,Beijing
+U103,Male,34,Food,Cooking Oil,67,2024-04-27,Shanghai
+U104,Female,27,Electronics,Hub,149,2024-04-28,Guangzhou
+U105,Male,38,Clothing,Vest,179,2024-04-29,Shenzhen
+U106,Female,33,Food,Sauce Set,128,2024-04-30,Beijing
+U107,Male,26,Electronics,RAM,799,2024-05-01,Shanghai
+U108,Female,39,Clothing,Blouse,249,2024-05-02,Guangzhou
+U109,Male,32,Food,Bread Loaf,35,2024-05-03,Shenzhen
+U110,Female,30,Electronics,Mouse Pad,39,2024-05-04,Beijing
+U111,Male,24,Clothing,Underwear,89,2024-05-05,Shanghai
+U112,Female,41,Food,Cookies,42,2024-05-06,Guangzhou
+U113,Male,35,Electronics,CPU,2199,2024-05-07,Shenzhen
+U114,Female,26,Clothing,Bracelet,299,2024-05-08,Beijing
+U115,Male,37,Food,Fish,128,2024-05-09,Shanghai
+U116,Female,31,Electronics,LED Strip,59,2024-05-10,Guangzhou
+U117,Male,28,Clothing,Purse,359,2024-05-11,Shenzhen
+U118,Female,44,Food,Coconut Oil,88,2024-05-12,Beijing
+U119,Male,31,Electronics,Graphics Card,2999,2024-05-13,Shanghai
+U120,Female,29,Clothing,Necklace,499,2024-05-14,Guangzhou
+U121,Male,40,Food,Beef Steak,198,2024-05-15,Shenzhen
+U122,Female,25,Electronics,Speaker,499,2024-05-16,Beijing
+U123,Male,36,Clothing,Overall,279,2024-05-17,Shanghai
+U124,Female,32,Food,Salmon Fillet,156,2024-05-18,Guangzhou
+U125,Male,27,,Protein Powder,188,2024-05-19,Shenzhen
+U126,Female,38,Clothing,Overcoat,699,2024-05-20,Beijing
+U127,Male,33,Electronics,Controller,299,2024-05-21,Shanghai
+U128,Female,24,Food,Quinoa,78,2024-05-22,Guangzhou
+U129,Male,42,Clothing,Zipper,49,2024-05-23,Shenzhen
+U130,Female,30,Electronics,Chromecast,299,2024-05-24,Beijing
+U131,Male,29,Food,Foie Gras,688,2024-05-25,Shanghai
+U132,Female,35,Clothing,Bikini,199,2024-05-26,Guangzhou
+U133,Male,26,Electronics,Power Strip,79,2024-05-27,Shenzhen
+U134,Female,41,Food,Ramen,25,2024-05-28,Beijing
+U135,Male,34,Clothing,Slippers,89,2024-05-29,Shanghai
+U136,Female,28,Electronics,Smart Plug,49,2024-05-30,Guangzhou
+U137,Male,39,Food,Lobster,388,2024-05-31,Shenzhen
+U138,Female,31,Clothing,Headband,39,2024-06-01,Beijing
+U139,Male,25,Electronics,Drawing Tablet,699,2024-06-02,Shanghai
+U140,Female,36,Food,Tuna,128,2024-06-03,Guangzhou
+U141,Male,32,Clothing,Wedding Dress,1299,2024-06-04,Shenzhen
+U142,Female,27,Electronics,Table Lamp,159,2024-06-05,Beijing
+U143,Male,43,Food,Caviar,999,2024-06-06,Shanghai
+U144,Female,34,Clothing,Tuxedo,899,2024-06-07,Guangzhou
+U145,Male,28,Electronics,Webcam,299,2024-06-08,Shenzhen
+U146,Female,40,Food,Cheese Cake,88,2024-06-09,Beijing
+U147,Male,31,Clothing,Yoga Pants,169,2024-06-10,Shanghai
+U148,Female,26,Electronics,CPU Cooler,159,2024-06-11,Guangzhou
+U149,Male,37,Food,Chips,35,2024-06-12,Shenzhen
+U150,Female,33,Clothing,Jumpsuit,259,2024-06-13,Beijing
+U151,Male,29,Electronics,Motherboard,1299,2024-06-14,Shanghai
+U152,Female,38,Food,Cream,68,2024-06-15,Guangzhou
+U153,Male,26,Clothing,Bra,129,2024-06-16,Shenzhen
+U154,Female,42,Electronics,Capture Card,499,2024-06-17,Beijing
+U155,Male,35,Food,Corn,45,2024-06-18,Shanghai
+U156,Female,30,Clothing,Stockings,59,2024-06-19,Guangzhou
+U157,Male,44,Electronics,VR Headset,1999,2024-06-20,Shenzhen
+U158,Female,32,Food,Ice Cream,38,2024-06-21,Beijing
+U159,Male,27,Clothing,Anorak,499,2024-06-22,Shanghai
+U160,Female,36,Electronics,GPU,3999,2024-06-23,Guangzhou
+U161,Male,33,Food,Truffle Oil,188,2024-06-24,Shenzhen
+U162,Female,25,Clothing,Cargo Pants,229,2024-06-25,Beijing
+U163,Male,39,Electronics,PS5,2999,2024-06-26,Shanghai
+U164,Female,31,Food,Kombucha,48,2024-06-27,Guangzhou
+U165,Male,28,Clothing,Peacoat,599,2024-06-28,Shenzhen
+U166,Female,43,Electronics,AirTag,99,2024-06-29,Beijing
+U167,Male,32,Food,Sashimi,288,2024-06-30,Shanghai
+U168,Female,29,Clothing,Palazzo Pants,189,2024-07-01,Guangzhou
+U169,Male,36,Electronics,Xbox,2499,2024-07-02,Shenzhen
+U170,Female,34,Food,Edamame,38,2024-07-03,Beijing
+U171,Male,25,Clothing,Chinos,179,2024-07-04,Shanghai
+U172,Female,40,Electronics,Kindle,799,2024-07-05,Guangzhou
+U173,Male,31,Food,Miso Soup,28,2024-07-06,Shenzhen
+U174,Female,27,Clothing,Culottes,209,2024-07-07,Beijing
+U175,Male,38,Electronics,Apple Watch,2299,2024-07-08,Shanghai
+U176,Female,33,Food,Seaweed,18,2024-07-09,Guangzhou
+U177,Male,26,Clothing,Polo Shirt,149,2024-07-10,Shenzhen
+U178,Female,41,Electronics,HomePod,2299,2024-07-11,Beijing
+U179,Male,30,Food,Pickles,25,2024-07-12,Shanghai
+U180,Female,35,Clothing,Sun Dress,269,2024-07-13,Guangzhou
+U181,Male,24,Electronics,AirPods,1099,2024-07-14,Shenzhen
+U182,Female,37,Food,Capers,38,2024-07-15,Beijing
+U183,Male,32,Clothing,Wrap Dress,349,2024-07-16,Shanghai
+U184,Female,28,Electronics,MagSafe Charger,149,2024-07-17,Guangzhou
+U185,Male,39,Food,Ghee,88,2024-07-18,Shenzhen
+U186,Female,31,Clothing,Tank Top,79,2024-07-19,Beijing
+U187,Male,27,Electronics,Car Charger,69,2024-07-20,Shanghai
+U188,Female,42,Food,Tahini,58,2024-07-21,Guangzhou
+U189,Male,34,Clothing,Tunic,219,2024-07-22,Shenzhen
+U190,Female,30,Electronics,Extension Cord,45,2024-07-23,Beijing
+U191,Male,28,Food,Acai Bowl,68,2024-07-24,Shanghai
+U192,Female,36,Clothing,Maxi Dress,399,2024-07-25,Guangzhou
+U193,Male,33,,Protein Bar,45,2024-07-26,Shenzhen
+U194,Female,25,Electronics,Wireless Charger,99,2024-07-27,Beijing
+U195,Male,40,Clothing,Sweatshirt,159,2024-07-28,Shanghai
+U196,Female,32,Food,Greek Yogurt,48,2024-07-29,Guangzhou
+U197,Male,29,Electronics,Car Mount,39,2024-07-30,Shenzhen
+U198,Female,38,Clothing,Halter Top,129,2024-07-31,Beijing
+U199,Male,26,Food,Chia Seeds,38,2024-08-01,Shanghai
+U200,Female,33,Electronics,Power Bank,159,2024-08-02,Guangzhou
